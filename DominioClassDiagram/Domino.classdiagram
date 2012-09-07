@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="9b19dc57-90a5-4eb6-9ffa-f4147dd3bbbe" name="Domino" linkedPackageId="2aaca2ee-8637-41ff-8688-bf51c25e4038" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="55765a05-ba32-4446-a2f8-ef7b4a1936da" name="Artista" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="12f4244b-ce2c-432b-9dd6-3359bd609c05" />
+        <generalsInternal>
+          <generalization Id="36a48c0c-414b-4028-8e0a-d9d89af8c274" isSubstitutable="false">
+            <classMoniker Id="4c4655cf-e27a-4859-8021-fca13aad7fc0" LastKnownName="Pessoa" />
+            <elementDefinition Id="d2791ec6-ccfc-4839-ac38-87dfb23fd27f" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="17bb33b1-86bd-4a8c-8573-cbb9b40047d1" isDerived="false" sourceEndRoleName="Artista" targetEndRoleName="Estilo" isLeaf="false" isAbstract="false">
+            <classMoniker Id="9efbae75-3758-40d2-b87d-7a040601782d" LastKnownName="Estilo" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b6490e7e-7b1e-446a-b45b-7da869defa85" name="Artista" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="0e6e3403-b250-482c-9fbd-6eecf7b90688" name="Lower" value="*">
+                      <elementDefinition Id="ef51a425-f052-4686-bb44-40ef5ff202a2" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="3bad0216-0dfc-45ec-ad57-3232d582afb7" name="Upper" value="*">
+                      <elementDefinition Id="ec0be21c-635b-4700-9641-7d3092952102" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="cb16502d-d175-4327-b793-ef177cd6cdb3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="700a09a8-b989-4b36-b458-7ff2cce91b00" name="Estilo" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="bc3e927a-da54-4454-9ead-1a58a2962e90" name="Lower" value="*">
+                      <elementDefinition Id="41ac7aa3-c3c0-42cb-9fa3-63b346f5dc3a" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="fc06720b-b241-4e49-91a9-050102314c65" name="Upper" value="*">
+                      <elementDefinition Id="69f569a4-1fa0-4591-b898-2f7c0e2b686b" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="e04e8248-bd5d-4da3-9b2a-8edcca0a8cc1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2ce9689d-fec0-40e4-8c77-62cf330a24c8" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="b29ab8e0-ad8f-4a66-b199-fe0ff89b6619" name="Discografia" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6b471965-d72d-4765-b9d5-adba26f06fcf" />
+          </property>
+          <property Id="c0775cb8-e074-4a4f-873e-af6cc7ae3585" name="NomeArtistico" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="07980588-5fe7-4f87-8d34-e3e8c02395f0" />
+          </property>
+          <property Id="134883d0-9796-4bb6-8789-27f48ea50f3b" name="Premios" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="29d1cad6-d5d5-4573-b614-1e73cdf36dc1" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="bf0f1ccf-4603-4418-bec0-2b95aa150a54" name="Album" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ac748b57-f9fb-44ca-8d38-5dbbb4073a16" />
+        <targetEnds>
+          <association Id="12794f81-c205-490a-b70b-63864d702828" isDerived="false" sourceEndRoleName="Album" targetEndRoleName="Artista" isLeaf="false" isAbstract="false">
+            <classMoniker Id="55765a05-ba32-4446-a2f8-ef7b4a1936da" LastKnownName="Artista" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="07679cf2-8768-41d5-b331-e8e58a27c4bf" name="Album" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="0e21fdd6-6948-4eca-88a5-e6af50fa89d4" name="Lower" value="0-*">
+                      <elementDefinition Id="56adad19-d4ff-4416-9364-35c7b61d56ef" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="40d2ef24-9e46-4620-b4b8-df0b071587b0" name="Upper" value="0-*">
+                      <elementDefinition Id="5ff03c49-9e96-4b2a-87ad-be2e74a1faa4" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="38d8427a-796d-4e3f-b466-b6409a24e2aa" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="368bfb0e-32b8-4f12-ba3d-b7540fc62549" name="Artista" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="da62962c-1ec9-4e6f-9923-544fe8d7313c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9898817e-9e2a-4025-ab40-53a410e36b10" />
+          </association>
+          <association Id="6b678257-5ebb-4029-8e5c-c675ee2e48cb" isDerived="false" sourceEndRoleName="Album" targetEndRoleName="Musica" isLeaf="false" isAbstract="false">
+            <classMoniker Id="fb4f6896-01ae-4ceb-bfc7-0f47e78101a2" LastKnownName="Musica" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bab7c820-ec9d-4583-b796-3bd9260c0c3b" name="Album" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1be27e5a-9a43-45d3-a4d1-edfd1fe68801" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e524f8cf-d819-47a6-8e46-b8029d6c4d10" name="Musica" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="7f054937-dff7-4696-bd3d-3b59a8c78302" name="Lower" value="*">
+                      <elementDefinition Id="0194a595-539e-4c4a-bf67-5c0cddd0e4c6" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="fdd6b683-4a7a-4b07-9146-0d69f7b08c43" name="Upper" value="*">
+                      <elementDefinition Id="693c0cfd-a581-4146-a71f-63c1f023a83b" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="eb5449f4-790c-4ca7-9fd3-823f2489dbdb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9eb8a394-c458-4bf1-a400-29a541bb134e" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="0d55ec61-fc8d-4065-bd95-f3f1160544ac" name="Capa" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="95521916-1f07-4cf2-97c6-c725acb4a9fa" />
+          </property>
+          <property Id="475a4734-5a61-4244-b09c-e855ade0232d" name="Titulo" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="68d23b8b-8fd2-40bd-ab75-b6bc8da284e4" />
+          </property>
+          <property Id="f44155b9-5004-4946-b21b-4d3c7e7c7bb4" name="DataLancamento" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="45ab0799-15c1-4770-aa1c-bf97beb5e2c8" />
+          </property>
+          <property Id="cd61adcc-8058-40f3-8ba2-3556f0ec6185" name="Avaliacao" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e9c21200-b46e-4a26-9de1-9c8e674a0a70" />
+          </property>
+          <property Id="d426f205-dd91-4945-897f-239e44421da3" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="585fc18a-cda5-4d70-9dca-929ebd1467fb" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="fb4f6896-01ae-4ceb-bfc7-0f47e78101a2" name="Musica" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f5e97a82-0579-434a-b0a3-56b2d7e27535" />
+        <ownedAttributesInternal>
+          <property Id="80e241ed-e85f-4cd7-91a4-a9800a49794c" name="Titulo" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b52e3e65-55b1-4d17-a9b8-eb88e63bc8a5" />
+          </property>
+          <property Id="bc9dc6cb-c7ae-4cdf-adff-46cd34729acb" name="DuracaoSegundos" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f80928c9-0410-4dd8-ac63-65bdef6eb613" />
+          </property>
+          <property Id="e165cf5a-1731-48dc-95d5-7d31f288c923" name="Avaliacao" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d6fea741-355d-446d-ba4b-10da36775a5b" />
+          </property>
+          <property Id="aaf5834a-333a-4820-b8f9-f4e2c90ec1d5" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="970f1617-0bd1-4d93-b31c-b8b77655e30f" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="9efbae75-3758-40d2-b87d-7a040601782d" name="Estilo" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e963c3e4-06bf-4466-a188-d719132fae81" />
+        <ownedAttributesInternal>
+          <property Id="30da7891-20c6-4d75-9dc5-b6d50a6950df" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0b03e13e-c50c-43a0-abb0-f0b1fe88f510" />
+          </property>
+          <property Id="6b059d42-6268-4185-8fe8-5610deb4bd42" name="Descricao" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="05046788-bb1a-4628-9acd-3055db2f8716" />
+          </property>
+          <property Id="a73d2da8-cea0-4c8d-974e-bc8d115b1617" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8b391304-3623-4a42-9238-2df1a09d4210" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="1dc687ca-a537-44f4-b8c6-2d6716eafe0e" name="Contato" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="43c5cc9c-f729-4f92-9976-5fed2702284d" />
+        <ownedAttributesInternal>
+          <property Id="49de5e10-0b8b-47cb-bd1d-32a02c473350" name="Fone" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="59cc22d6-6b26-4a6b-9f92-27c66f9a761f" />
+          </property>
+          <property Id="d0569084-c4b5-41c9-ade3-2ccb76639b80" name="Email" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="11e07f28-1d6a-4707-bc79-a8165aa286b5" />
+          </property>
+          <property Id="fc4ab203-54b6-4768-888b-f6d718317858" name="Site" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="21d5f8f8-a34b-417f-9cf2-9b9b6b93d27f" />
+          </property>
+          <property Id="4605d974-d5eb-4a4a-90ef-ab10f1591c0c" name="Celular" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2a59cd4a-63c5-4d27-9085-6af1dd5a498e" />
+          </property>
+          <property Id="b58ca29f-f9d5-4ec4-87f3-beb9a5aadfc8" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d513c2fd-3c64-4d61-9d62-b9829d845406" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4c4655cf-e27a-4859-8021-fca13aad7fc0" name="Pessoa" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="95fd2bb2-48b3-45e7-8370-2388957d7db4" />
+        <targetEnds>
+          <association Id="e88557a2-2753-4ea4-a497-d975c91a70c5" isDerived="false" sourceEndRoleName="Pessoa" targetEndRoleName="Contato" isLeaf="false" isAbstract="false">
+            <classMoniker Id="1dc687ca-a537-44f4-b8c6-2d6716eafe0e" LastKnownName="Contato" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d2fc3711-28b1-43ae-92a8-1f6bab2fe108" name="Pessoa" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6448e402-6fb7-486d-a180-b821e5e7e807" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="23cf967b-9d84-4a29-8bbc-2c5a2643adad" name="Contato" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="28919669-dbad-412c-9a40-553ee043ba35" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a3a7d77c-56b4-4751-bfd3-353c0f6bf5ba" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="1f3b38d8-9033-4876-ae22-772a5eecfcb3" name="Nome" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3f8bb74e-937a-45ff-8a3e-70e01be55681" />
+          </property>
+          <property Id="06fc59b6-fd25-4324-ae2c-def4a9cf58fc" name="Sobrenome" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8f02a444-84a9-4c7c-b173-872a656f5a29" />
+          </property>
+          <property Id="edda9c49-1128-4418-a0b5-8b19b9ff1511" name="Sexo" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="dab0b4ff-f28b-46e0-9ee7-1593286d6a51" />
+          </property>
+          <property Id="525fefe5-5eab-4b3b-9629-bd5aa65449e3" name="DataNascimento" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a1abe113-e27b-4373-ad48-e9fcf3b1d515" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="fdbeaece-b32d-47ff-8a96-fafc2c795096" name="Produtor" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="da9b2745-9d88-44e7-92c0-40772156394f" />
+        <generalsInternal>
+          <generalization Id="8b7c4324-3584-4a02-b29b-c2f34e091fd2" isSubstitutable="false">
+            <classMoniker Id="4c4655cf-e27a-4859-8021-fca13aad7fc0" LastKnownName="Pessoa" />
+            <elementDefinition Id="84cef586-762f-4b94-9d47-899f0cefc962" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="93011158-740d-4079-ab08-311b3fa85cc9" name="Tipo" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7d3cf83a-151e-4d56-9b53-0184ed17efad" />
+          </property>
+          <property Id="cafe4cd9-3b04-4f57-9677-9a993bf179cb" name="Salario" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b70feea8-4408-42ef-b756-379a9bf0f87b" />
+          </property>
+          <property Id="590b979f-ec04-4235-a270-41531b764a86" name="Comissao" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0da7e518-3bd7-44d8-91d5-eaba6355dbb6" />
+          </property>
+          <property Id="c549c3d1-a241-420a-8131-698b8ee32715" name="Cargo" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f9055d5d-c629-478c-95b4-eb14b9a3eade" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="3f20456d-0be9-4231-8758-67fdb06e8a90" name="Usuario" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="fbcd27ec-124e-4776-a73f-55f138f4cbcd" />
+        <generalsInternal>
+          <generalization Id="1a0ff4f0-ab91-4385-b02a-35d4263448b8" isSubstitutable="false">
+            <classMoniker Id="4c4655cf-e27a-4859-8021-fca13aad7fc0" LastKnownName="Pessoa" />
+            <elementDefinition Id="8ec9eea4-469e-4b89-8144-8e45e11b68b6" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="6fcebdbe-ff4f-4964-a029-822f3ce2f5a6" name="Login" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="178b1ba0-b9a2-4dc2-a333-edb0d77356ce" />
+          </property>
+          <property Id="44dfe0d3-de7c-465f-a5c6-ef7f1159240c" name="Senha" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1d30d207-eda5-4c1b-ab0d-5aba1a435e64" />
+          </property>
+          <property Id="20c282dc-a5ad-459b-bcf9-6e47e162b3b3" name="UltimoAcesso" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6ffd4534-50ca-494f-a948-8638c6690b70" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="2aaca2ee-8637-41ff-8688-bf51c25e4038" name="DominioClassDiagram">
+    <elementDefinition Id="6c835434-8f1b-40e1-9122-b4304b268dae" />
+    <profileInstances>
+      <packageHasProfileInstances Id="0e95498a-ae72-400f-8341-027ee408f864">
+        <profileInstance Id="d9b45a17-4b61-4876-8727-342182da8993" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="4d3a16ea-c748-4ad8-aab5-f9cd57a495cd">
+        <profileInstance Id="2610a818-39fe-4e6e-a598-21f7298ee14c" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

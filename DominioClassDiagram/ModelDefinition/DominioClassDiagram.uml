@@ -25,16 +25,6 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
-        <generalsInternal>
-          <generalization
-            Id="d2791ec6-ccfc-4839-ac38-87dfb23fd27f"
-            isSubstitutable="false">
-            <classMoniker
-              Id="95fd2bb2-48b3-45e7-8370-2388957d7db4"
-              LastKnownName="Pessoa"
-              LastKnownLocation="DominioClassDiagram.uml" />
-          </generalization>
-        </generalsInternal>
         <targetEnds>
           <association
             Id="2ce9689d-fec0-40e4-8c77-62cf330a24c8"
@@ -101,11 +91,50 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="7ac3c88f-8cb7-4bd3-a9a9-d97c66f6dd91"
+            isDerived="false"
+            sourceEndRoleName="Artista"
+            targetEndRoleName="PessoaFisica"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="7db12fb2-229a-4007-b36b-983164af42d6"
+              LastKnownName="PessoaFisica"
+              LastKnownLocation="DominioClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c7ed86bd-d228-43a1-848b-97df59b53c75"
+                  name="Artista"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1bfcc9ab-3396-4308-83b7-abea1240ab60"
+                  name="PessoaFisica"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="6b471965-d72d-4765-b9d5-adba26f06fcf"
-            name="Discografia"
+            name="Cache"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -126,8 +155,8 @@
             aggregation="None"
             isComposite="false" />
           <property
-            Id="29d1cad6-d5d5-4573-b614-1e73cdf36dc1"
-            name="Premios"
+            Id="9c6a409d-7f69-41ec-8d31-1eb3ac140825"
+            name="Id"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -373,17 +402,6 @@
         isActiveClass="false">
         <ownedAttributesInternal>
           <property
-            Id="0b03e13e-c50c-43a0-abb0-f0b1fe88f510"
-            name="Id"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-          <property
             Id="05046788-bb1a-4628-9acd-3055db2f8716"
             name="Descricao"
             isLeaf="false"
@@ -504,8 +522,7 @@
                   isDerived="false"
                   isDerivedUnion="false"
                   aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
+                  isComposite="false" />
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
@@ -524,8 +541,8 @@
         </targetEnds>
         <ownedAttributesInternal>
           <property
-            Id="3f8bb74e-937a-45ff-8a3e-70e01be55681"
-            name="Nome"
+            Id="12ceb7d7-52f6-49be-8724-a0515f9bb5eb"
+            name="Endereco"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -535,30 +552,8 @@
             aggregation="None"
             isComposite="false" />
           <property
-            Id="8f02a444-84a9-4c7c-b173-872a656f5a29"
-            name="Sobrenome"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-          <property
-            Id="dab0b4ff-f28b-46e0-9ee7-1593286d6a51"
-            name="Sexo"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-          <property
-            Id="a1abe113-e27b-4373-ad48-e9fcf3b1d515"
-            name="DataNascimento"
+            Id="5315c09a-f78b-43f0-8818-5d4cc2a0fffe"
+            name="Id"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -577,16 +572,47 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
-        <generalsInternal>
-          <generalization
-            Id="84cef586-762f-4b94-9d47-899f0cefc962"
-            isSubstitutable="false">
+        <targetEnds>
+          <association
+            Id="4b5c79be-ec02-4613-889f-de3c2f4b5985"
+            isDerived="false"
+            sourceEndRoleName="Produtor"
+            targetEndRoleName="PessoaFisica"
+            isLeaf="false"
+            isAbstract="false">
             <classMoniker
-              Id="95fd2bb2-48b3-45e7-8370-2388957d7db4"
-              LastKnownName="Pessoa"
+              Id="7db12fb2-229a-4007-b36b-983164af42d6"
+              LastKnownName="PessoaFisica"
               LastKnownLocation="DominioClassDiagram.uml" />
-          </generalization>
-        </generalsInternal>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7373ff06-cc5c-482a-8933-00989e91a7fb"
+                  name="Produtor"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8108b2e8-3af9-47cd-ae57-d9832a965fa8"
+                  name="PessoaFisica"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="7d3cf83a-151e-4d56-9b53-0184ed17efad"
@@ -632,6 +658,17 @@
             isDerivedUnion="false"
             aggregation="None"
             isComposite="false" />
+          <property
+            Id="0b36e573-e374-48e4-b024-7fb16d25d601"
+            name="Id"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
         </ownedAttributesInternal>
       </class>
     </packageHasNamedElement>
@@ -642,16 +679,47 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
-        <generalsInternal>
-          <generalization
-            Id="8ec9eea4-469e-4b89-8144-8e45e11b68b6"
-            isSubstitutable="false">
+        <targetEnds>
+          <association
+            Id="58c9145c-bd88-4572-a3b9-caee77e08a63"
+            isDerived="false"
+            sourceEndRoleName="Usuario"
+            targetEndRoleName="PessoaFisica"
+            isLeaf="false"
+            isAbstract="false">
             <classMoniker
-              Id="95fd2bb2-48b3-45e7-8370-2388957d7db4"
-              LastKnownName="Pessoa"
+              Id="7db12fb2-229a-4007-b36b-983164af42d6"
+              LastKnownName="PessoaFisica"
               LastKnownLocation="DominioClassDiagram.uml" />
-          </generalization>
-        </generalsInternal>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e882e531-7981-45fe-8158-58e64579ff34"
+                  name="Usuario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="29509d85-bfa6-4e69-8ec8-6abb089c1020"
+                  name="PessoaFisica"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="178b1ba0-b9a2-4dc2-a333-edb0d77356ce"
@@ -678,6 +746,158 @@
           <property
             Id="6ffd4534-50ca-494f-a948-8638c6690b70"
             name="UltimoAcesso"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="0be20798-4aac-431b-8897-919b3f17b3af"
+            name="Id"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="7db12fb2-229a-4007-b36b-983164af42d6"
+        name="PessoaFisica"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="e26994b1-bccf-469d-8667-e278a6895aaa"
+            isSubstitutable="false">
+            <classMoniker
+              Id="95fd2bb2-48b3-45e7-8370-2388957d7db4"
+              LastKnownName="Pessoa"
+              LastKnownLocation="DominioClassDiagram.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="f59f3418-605d-42cc-b855-8c6aff698dbd"
+            name="Nome"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="99b70b82-2be0-4fe6-8f6e-4aa4e456b9ed"
+            name="Cpf"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="2f5e1d44-aca4-4cb1-a5fb-bc4f487966a2"
+            name="DataNascimento"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="98f8fe32-8d18-46bf-b8c1-5bbce12adf0e"
+            name="Sexo"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="bfdece99-e539-4e3f-a569-54c82db650a7"
+            name="Sobrenome"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b3f9485a-cacb-4dee-ae95-95b44ae607d4"
+        name="PessoaJuridica"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="94ab10ca-3c77-4d9d-91f6-e5c909918256"
+            isSubstitutable="false">
+            <classMoniker
+              Id="95fd2bb2-48b3-45e7-8370-2388957d7db4"
+              LastKnownName="Pessoa"
+              LastKnownLocation="DominioClassDiagram.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="b3ffba0c-792e-4804-ada4-9e54950d9240"
+            name="RazaoSocial"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="dcb87025-8cb2-47dc-9aa3-ef75df15f258"
+            name="Cnpj"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="07664ffb-1dbb-49cb-86dc-a562de48e43a"
+            name="DataAbertura"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="f446edf9-e821-42cc-9114-a157cf5f75a3"
+            name="NomeFantasia"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"

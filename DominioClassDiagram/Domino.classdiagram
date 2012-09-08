@@ -4,12 +4,6 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="55765a05-ba32-4446-a2f8-ef7b4a1936da" name="Artista" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="12f4244b-ce2c-432b-9dd6-3359bd609c05" />
-        <generalsInternal>
-          <generalization Id="36a48c0c-414b-4028-8e0a-d9d89af8c274" isSubstitutable="false">
-            <classMoniker Id="4c4655cf-e27a-4859-8021-fca13aad7fc0" LastKnownName="Pessoa" />
-            <elementDefinition Id="d2791ec6-ccfc-4839-ac38-87dfb23fd27f" />
-          </generalization>
-        </generalsInternal>
         <targetEnds>
           <association Id="17bb33b1-86bd-4a8c-8573-cbb9b40047d1" isDerived="false" sourceEndRoleName="Artista" targetEndRoleName="Estilo" isLeaf="false" isAbstract="false">
             <classMoniker Id="9efbae75-3758-40d2-b87d-7a040601782d" LastKnownName="Estilo" />
@@ -47,16 +41,32 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="2ce9689d-fec0-40e4-8c77-62cf330a24c8" />
           </association>
+          <association Id="7c601e05-9945-4e92-9770-c1ed66fa3e55" isDerived="false" sourceEndRoleName="Artista" targetEndRoleName="PessoaFisica" isLeaf="false" isAbstract="false">
+            <classMoniker Id="1275adc8-696a-4580-9bba-44f0f45c763e" LastKnownName="PessoaFisica" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1f0fd5d2-8ff3-4058-b11d-ccca340c249f" name="Artista" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c7ed86bd-d228-43a1-848b-97df59b53c75" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5db36401-5787-45f1-9eee-de5d060c8ecb" name="PessoaFisica" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1bfcc9ab-3396-4308-83b7-abea1240ab60" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7ac3c88f-8cb7-4bd3-a9a9-d97c66f6dd91" />
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
-          <property Id="b29ab8e0-ad8f-4a66-b199-fe0ff89b6619" name="Discografia" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="b29ab8e0-ad8f-4a66-b199-fe0ff89b6619" name="Cache" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="6b471965-d72d-4765-b9d5-adba26f06fcf" />
           </property>
           <property Id="c0775cb8-e074-4a4f-873e-af6cc7ae3585" name="NomeArtistico" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="07980588-5fe7-4f87-8d34-e3e8c02395f0" />
           </property>
-          <property Id="134883d0-9796-4bb6-8789-27f48ea50f3b" name="Premios" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="29d1cad6-d5d5-4573-b614-1e73cdf36dc1" />
+          <property Id="5ded5dca-7247-4609-91d0-b48cc9ab200d" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9c6a409d-7f69-41ec-8d31-1eb3ac140825" />
           </property>
         </ownedAttributesInternal>
       </class>
@@ -160,9 +170,6 @@
       <class Id="9efbae75-3758-40d2-b87d-7a040601782d" name="Estilo" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="e963c3e4-06bf-4466-a188-d719132fae81" />
         <ownedAttributesInternal>
-          <property Id="30da7891-20c6-4d75-9dc5-b6d50a6950df" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="0b03e13e-c50c-43a0-abb0-f0b1fe88f510" />
-          </property>
           <property Id="6b059d42-6268-4185-8fe8-5610deb4bd42" name="Descricao" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="05046788-bb1a-4628-9acd-3055db2f8716" />
           </property>
@@ -202,7 +209,7 @@
             <classMoniker Id="1dc687ca-a537-44f4-b8c6-2d6716eafe0e" LastKnownName="Contato" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
-                <memberEnd Id="d2fc3711-28b1-43ae-92a8-1f6bab2fe108" name="Pessoa" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                <memberEnd Id="d2fc3711-28b1-43ae-92a8-1f6bab2fe108" name="Pessoa" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="6448e402-6fb7-486d-a180-b821e5e7e807" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -216,17 +223,11 @@
           </association>
         </targetEnds>
         <ownedAttributesInternal>
-          <property Id="1f3b38d8-9033-4876-ae22-772a5eecfcb3" name="Nome" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="3f8bb74e-937a-45ff-8a3e-70e01be55681" />
+          <property Id="aafab6f8-c237-4ff6-a68c-6a155243566f" name="Endereco" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="12ceb7d7-52f6-49be-8724-a0515f9bb5eb" />
           </property>
-          <property Id="06fc59b6-fd25-4324-ae2c-def4a9cf58fc" name="Sobrenome" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="8f02a444-84a9-4c7c-b173-872a656f5a29" />
-          </property>
-          <property Id="edda9c49-1128-4418-a0b5-8b19b9ff1511" name="Sexo" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="dab0b4ff-f28b-46e0-9ee7-1593286d6a51" />
-          </property>
-          <property Id="525fefe5-5eab-4b3b-9629-bd5aa65449e3" name="DataNascimento" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="a1abe113-e27b-4373-ad48-e9fcf3b1d515" />
+          <property Id="46710450-7ae8-43bc-9887-dd6b4a5806ad" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="5315c09a-f78b-43f0-8818-5d4cc2a0fffe" />
           </property>
         </ownedAttributesInternal>
       </class>
@@ -234,12 +235,24 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="fdbeaece-b32d-47ff-8a96-fafc2c795096" name="Produtor" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="da9b2745-9d88-44e7-92c0-40772156394f" />
-        <generalsInternal>
-          <generalization Id="8b7c4324-3584-4a02-b29b-c2f34e091fd2" isSubstitutable="false">
-            <classMoniker Id="4c4655cf-e27a-4859-8021-fca13aad7fc0" LastKnownName="Pessoa" />
-            <elementDefinition Id="84cef586-762f-4b94-9d47-899f0cefc962" />
-          </generalization>
-        </generalsInternal>
+        <targetEnds>
+          <association Id="cdaf9b9f-54b8-41eb-99d0-90280dfeb09a" isDerived="false" sourceEndRoleName="Produtor" targetEndRoleName="PessoaFisica" isLeaf="false" isAbstract="false">
+            <classMoniker Id="1275adc8-696a-4580-9bba-44f0f45c763e" LastKnownName="PessoaFisica" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bc565ccc-4991-45f9-a384-7f5e68fdb57f" name="Produtor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7373ff06-cc5c-482a-8933-00989e91a7fb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="68298978-04da-41c3-8899-86ca35b86547" name="PessoaFisica" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8108b2e8-3af9-47cd-ae57-d9832a965fa8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4b5c79be-ec02-4613-889f-de3c2f4b5985" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property Id="93011158-740d-4079-ab08-311b3fa85cc9" name="Tipo" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="7d3cf83a-151e-4d56-9b53-0184ed17efad" />
@@ -253,18 +266,33 @@
           <property Id="c549c3d1-a241-420a-8131-698b8ee32715" name="Cargo" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="f9055d5d-c629-478c-95b4-eb14b9a3eade" />
           </property>
+          <property Id="f75fdad5-25f4-4e12-8595-71c27b141b36" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0b36e573-e374-48e4-b024-7fb16d25d601" />
+          </property>
         </ownedAttributesInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
       <class Id="3f20456d-0be9-4231-8758-67fdb06e8a90" name="Usuario" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="fbcd27ec-124e-4776-a73f-55f138f4cbcd" />
-        <generalsInternal>
-          <generalization Id="1a0ff4f0-ab91-4385-b02a-35d4263448b8" isSubstitutable="false">
-            <classMoniker Id="4c4655cf-e27a-4859-8021-fca13aad7fc0" LastKnownName="Pessoa" />
-            <elementDefinition Id="8ec9eea4-469e-4b89-8144-8e45e11b68b6" />
-          </generalization>
-        </generalsInternal>
+        <targetEnds>
+          <association Id="cb2de669-b7b8-4785-9080-64fe3f7d4d12" isDerived="false" sourceEndRoleName="Usuario" targetEndRoleName="PessoaFisica" isLeaf="false" isAbstract="false">
+            <classMoniker Id="1275adc8-696a-4580-9bba-44f0f45c763e" LastKnownName="PessoaFisica" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d509d8be-d2a2-4cc8-b74a-24efdf9b0221" name="Usuario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e882e531-7981-45fe-8158-58e64579ff34" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1fc516f9-17ea-4c73-8921-665eca17f713" name="PessoaFisica" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="29509d85-bfa6-4e69-8ec8-6abb089c1020" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="58c9145c-bd88-4572-a3b9-caee77e08a63" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property Id="6fcebdbe-ff4f-4964-a029-822f3ce2f5a6" name="Login" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="178b1ba0-b9a2-4dc2-a333-edb0d77356ce" />
@@ -274,6 +302,62 @@
           </property>
           <property Id="20c282dc-a5ad-459b-bcf9-6e47e162b3b3" name="UltimoAcesso" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="6ffd4534-50ca-494f-a948-8638c6690b70" />
+          </property>
+          <property Id="30d7f275-bf1a-43f2-b1d1-4d8bda295b77" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0be20798-4aac-431b-8897-919b3f17b3af" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="1275adc8-696a-4580-9bba-44f0f45c763e" name="PessoaFisica" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7db12fb2-229a-4007-b36b-983164af42d6" />
+        <generalsInternal>
+          <generalization Id="dd24f74e-4d7e-40f3-bd13-9bc364d7b035" isSubstitutable="false">
+            <classMoniker Id="4c4655cf-e27a-4859-8021-fca13aad7fc0" LastKnownName="Pessoa" />
+            <elementDefinition Id="e26994b1-bccf-469d-8667-e278a6895aaa" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="c2b73b3e-6820-4c9e-acfc-ba57f84154af" name="Nome" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f59f3418-605d-42cc-b855-8c6aff698dbd" />
+          </property>
+          <property Id="b49b4ec5-914c-4f99-98c6-ecaa7f3a7cd4" name="Cpf" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="99b70b82-2be0-4fe6-8f6e-4aa4e456b9ed" />
+          </property>
+          <property Id="67b4f77e-e5cf-4bc4-bbec-92bd5ac48c51" name="DataNascimento" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2f5e1d44-aca4-4cb1-a5fb-bc4f487966a2" />
+          </property>
+          <property Id="767c0102-2b20-4dc6-bb6b-2f263446bb25" name="Sexo" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="98f8fe32-8d18-46bf-b8c1-5bbce12adf0e" />
+          </property>
+          <property Id="675c85a1-c806-4027-9f34-9b4f004deeaf" name="Sobrenome" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="bfdece99-e539-4e3f-a569-54c82db650a7" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="3b5923d7-8cad-440f-8b3e-47a0b911af2c" name="PessoaJuridica" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b3f9485a-cacb-4dee-ae95-95b44ae607d4" />
+        <generalsInternal>
+          <generalization Id="28f3fca4-c210-4be4-b153-f0dd742b3ab9" isSubstitutable="false">
+            <classMoniker Id="4c4655cf-e27a-4859-8021-fca13aad7fc0" LastKnownName="Pessoa" />
+            <elementDefinition Id="94ab10ca-3c77-4d9d-91f6-e5c909918256" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="eff2ad92-2bea-492c-8dcb-b48f5905c78f" name="RazaoSocial" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b3ffba0c-792e-4804-ada4-9e54950d9240" />
+          </property>
+          <property Id="24516694-a8a5-44c8-a9ea-41d822017620" name="Cnpj" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="dcb87025-8cb2-47dc-9aa3-ef75df15f258" />
+          </property>
+          <property Id="1571b398-b70c-42cc-9e05-4ddb977869f6" name="DataAbertura" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="07664ffb-1dbb-49cb-86dc-a562de48e43a" />
+          </property>
+          <property Id="01e93e90-b302-4f7e-97f0-60b75b2ac388" name="NomeFantasia" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f446edf9-e821-42cc-9114-a157cf5f75a3" />
           </property>
         </ownedAttributesInternal>
       </class>

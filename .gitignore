@@ -16,4 +16,5 @@ WebServer/UploadDasPgdas/*.zip
 */*/obj/Debug/*
 WebServer/UploadDasPgdas/*.zip
 */*/bin/*
-
+*.mdf
+*.ldf

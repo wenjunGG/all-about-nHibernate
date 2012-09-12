@@ -13,6 +13,12 @@ create table Pessoa (
 	, endereco text
 );
 
+create table Cidade(
+	id integer not null primary key autoincrement
+	, nome varchar(255)
+	, uf varchar(2)
+);
+
 create table Estilo(
 	id integer not null primary key autoincrement
 	, descricao varchar(255)
@@ -20,9 +26,11 @@ create table Estilo(
 
 create table Artista(
 	id integer primary key autoincrement
+	cidade_id integer not null
 	, nome varchar(255) null
 	, sobrenome varchar(255) null
 	, datanascimento text null
+	, foreign key(cidade_id) references Cidade(id)
 );
 
 create table EstiloArtista(

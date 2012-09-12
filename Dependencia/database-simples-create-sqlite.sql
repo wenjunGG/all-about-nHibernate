@@ -13,36 +13,10 @@ create table Pessoa (
 	, endereco text
 );
 
-create table Contato(
-	pessoa_id integer not null primary key 
-	, celular varchar(10)
-	, fone varchar(10)
-	, email varchar (255)
-	, site varchar(255)
-	, foreign key (pessoa_id) references Pessoa(id)
-);
-
-create table Usuario(
-	pessoa_id integer primary key
-	,login varchar(255) not null
-	, senha varchar(12) not null
-	, ultimoAcesso text null
-	, foreign key(pessoa_id) references Pessoa(id)
-);
-
-create table Produtor(
-	pessoa_id integer primary key
-	, cargo varchar(255) null
-	, comissao numeric null
-	, salario numeric null
-	, tipo varchar(15)
-	, foreign key(pessoa_id) references Pessoa(id)
-);
-
-create table Artista(
-	pessoa_id integer primary key
-	, cache money null
-	, nomeArtistico varchar(255) null
+create table Cidade(
+	id integer not null primary key autoincrement
+	, nome varchar(255)
+	, uf varchar(2)
 );
 
 create table Estilo(
@@ -50,11 +24,20 @@ create table Estilo(
 	, descricao varchar(255)
 );
 
+create table Artista(
+	id integer primary key autoincrement
+	cidade_id integer not null
+	, nome varchar(255) null
+	, sobrenome varchar(255) null
+	, datanascimento text null
+	, foreign key(cidade_id) references Cidade(id)
+);
+
 create table EstiloArtista(
-	artista_id integer not null
-	, estilo_id integer not null
+	artista_id int not null
+	, estilo_id int not null
 	, primary key(artista_id, estilo_id)
-	, foreign key (artista_id) references Artista(pessoa_id)
+	, foreign key (artista_id) references Artista(id)
 	, foreign key (estilo_id) references estilo(id)
 );
 
@@ -65,7 +48,7 @@ create table Album(
 	, capa varchar(255)
 	, dataLancamento text
 	, avaliacao integer
-	, foreign key (artista_id) references Artista(pessoa_id)
+	, foreign key (artista_id) references Artista(id)
 );
 
 create table Musica(

@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mapeamento\CidadeMap.cs" />
     <Compile Include="Mapeamento\PessoaFisicaMap.cs" />
     <Compile Include="Mapeamento\PessoaJuridicaMap.cs" />
     <Compile Include="Mapeamento\PessoaMap.cs" />

@@ -21,9 +21,9 @@ namespace Dominio.Util
 
                 var configurantion = new Configuration();
                 configurantion.DataBaseIntegration(conf => {
-                    conf.Dialect<MsSql2012Dialect>();
-                    conf.ConnectionString = "Data Source=(local);Initial Catalog=ESTUDONH;Integrated Security=False;User ID=sa;Password=;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False";
-                    conf.Driver<Sql2008ClientDriver>();
+                    conf.Dialect<SQLiteDialect>();
+                    conf.ConnectionString = "Data Source=data-domain.db;Version=3";
+                    conf.Driver<SQLiteDriver>();
                     conf.LogFormattedSql = true;
                     conf.LogSqlInConsole = true;
                 });

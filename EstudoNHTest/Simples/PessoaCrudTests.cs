@@ -100,5 +100,24 @@ namespace EstudoNHTest.Simples
                 }
             }
         }
+
+        [TestMethod]
+        public void CreateCidade()
+        {
+            using (var session = NHibernateSession.OpenSession())
+            {
+                using(var tran = session.BeginTransaction())
+                {
+                    var cidade = new Cidade
+                        {
+                            Nome = "Pindamonhancaba",
+                            Uf = "SP"
+                        };
+
+                    session.Save(cidade);
+                    tran.Rollback();
+                }
+            }
+        }
     }
 }

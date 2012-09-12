@@ -59,14 +59,20 @@
           </association>
         </targetEnds>
         <ownedAttributesInternal>
-          <property Id="b29ab8e0-ad8f-4a66-b199-fe0ff89b6619" name="Cache" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="6b471965-d72d-4765-b9d5-adba26f06fcf" />
+          <property Id="2d203c45-02f1-47a8-8616-a08b3462557d" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="03cfdfa2-5026-496f-8414-cb61bb0e0940" />
           </property>
-          <property Id="c0775cb8-e074-4a4f-873e-af6cc7ae3585" name="NomeArtistico" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="07980588-5fe7-4f87-8d34-e3e8c02395f0" />
+          <property Id="e6a8c517-2e4d-43e3-b9fb-3bd11af49757" name="Nome" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2475b5ac-1bc9-4b65-8cf2-9abe0cc0bd13" />
           </property>
-          <property Id="5ded5dca-7247-4609-91d0-b48cc9ab200d" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="9c6a409d-7f69-41ec-8d31-1eb3ac140825" />
+          <property Id="6b3eb441-90a8-4acc-9660-5a318e499c37" name="DataNascimento" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="039830d8-da04-440d-912e-e565bafad5d2" />
+          </property>
+          <property Id="c2357b04-ce03-4733-8460-5afc7d50ae80" name="Sexo" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d6dd8285-d0af-4f86-8385-2d19be3e7d8a" />
+          </property>
+          <property Id="c5ea087d-49b1-4b96-b377-3f7915331bf2" name="Sobrenome" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4f6aa122-c153-4686-8ae6-0833407d13ee" />
           </property>
         </ownedAttributesInternal>
       </class>

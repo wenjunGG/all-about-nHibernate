@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{01169CE1-1240-4556-91A6-4A4F38CB9C88}</ProjectGuid>
+    <ProjectGuid>{CC73F9C4-BD6E-4108-8F72-3BB876C01858}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Dominio</RootNamespace>
-    <AssemblyName>Dominio</AssemblyName>
+    <RootNamespace>Dominio.Simples</RootNamespace>
+    <AssemblyName>DominioSimplificado</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,12 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Iesi.Collections">
-      <HintPath>..\Dependencia\Iesi.Collections.dll</HintPath>
-    </Reference>
-    <Reference Include="NHibernate">
-      <HintPath>..\Dependencia\NHibernate.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -45,25 +39,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Mapeamento\EstiloMap.cs" />
-    <Compile Include="Mapeamento\PessoaFisicaMap.cs" />
-    <Compile Include="Mapeamento\PessoaJuridicaMap.cs" />
-    <Compile Include="Mapeamento\PessoaMap.cs" />
     <Compile Include="Model\Album.cs" />
     <Compile Include="Model\Artista.cs" />
-    <Compile Include="Model\Contato.cs" />
-    <Compile Include="Mapeamento\ContatoMap.cs" />
     <Compile Include="Model\Estilo.cs" />
     <Compile Include="Model\Musica.cs" />
     <Compile Include="Model\Pessoa.cs" />
     <Compile Include="Model\PessoaFisica.cs" />
     <Compile Include="Model\PessoaJuridica.cs" />
-    <Compile Include="Model\Produtor.cs" />
-    <Compile Include="Model\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Util\NHibernateSession.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Mapeamento\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data-simple-domain.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

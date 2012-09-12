@@ -133,30 +133,52 @@
         </targetEnds>
         <ownedAttributesInternal>
           <property
-            Id="6b471965-d72d-4765-b9d5-adba26f06fcf"
-            name="Cache"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-          <property
-            Id="07980588-5fe7-4f87-8d34-e3e8c02395f0"
-            name="NomeArtistico"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-          <property
-            Id="9c6a409d-7f69-41ec-8d31-1eb3ac140825"
+            Id="03cfdfa2-5026-496f-8414-cb61bb0e0940"
             name="Id"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="2475b5ac-1bc9-4b65-8cf2-9abe0cc0bd13"
+            name="Nome"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="039830d8-da04-440d-912e-e565bafad5d2"
+            name="DataNascimento"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="d6dd8285-d0af-4f86-8385-2d19be3e7d8a"
+            name="Sexo"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="4f6aa122-c153-4686-8ae6-0833407d13ee"
+            name="Sobrenome"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -908,6 +930,12 @@
             isComposite="false" />
         </ownedAttributesInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="15090b6d-2ba4-449d-a29e-ef986645dedb"
+        LastKnownName="Simples"
+        LastKnownLocation="Package_1302.uml" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

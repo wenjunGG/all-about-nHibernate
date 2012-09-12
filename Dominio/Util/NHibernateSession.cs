@@ -24,6 +24,8 @@ namespace Dominio.Util
                     conf.Dialect<MsSql2012Dialect>();
                     conf.ConnectionString = "Data Source=(local);Initial Catalog=ESTUDONH;Integrated Security=False;User ID=sa;Password=;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False";
                     conf.Driver<Sql2008ClientDriver>();
+                    conf.LogFormattedSql = true;
+                    conf.LogSqlInConsole = true;
                 });
 
                 configurantion.AddMapping(map);

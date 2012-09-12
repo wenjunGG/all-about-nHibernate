@@ -23,7 +23,7 @@ namespace Dominio.Simples.Util
                 config.DataBaseIntegration(conf => {
                     conf.Dialect<SQLiteDialect>();
                     conf.ConnectionString = "Data Source=data-simple-domain.db;Version=3";
-                    conf.Driver<SQLite20Driver>();
+                    conf.Driver<SQLiteDriver>();
                     conf.LogFormattedSql = true;
                     conf.LogSqlInConsole = true;
                 });

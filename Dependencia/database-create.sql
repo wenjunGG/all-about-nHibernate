@@ -18,10 +18,11 @@ create table Pessoa (
 	, dataAbertura date null
 	, dataNascimnento date null
 	, sexo char(1) null
+	, endereco text
 )
 
 create table Contato(
-	pessoa_id int not null primary key -- vai ser o id do artista
+	pessoa_id int not null primary key 
 	, celular varchar(10)
 	, fone varchar(10)
 	, email varchar (255)

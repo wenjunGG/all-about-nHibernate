@@ -40,7 +40,7 @@
             <classMoniker
               Id="c84f6ca7-29cb-4874-860b-109502b92e50"
               LastKnownName="Pessoa"
-              LastKnownLocation="Package_1302.uml" />
+              LastKnownLocation="DominioSimplesClassDiagram.uml" />
           </generalization>
         </generalsInternal>
         <ownedAttributesInternal>
@@ -83,7 +83,7 @@
             <classMoniker
               Id="c84f6ca7-29cb-4874-860b-109502b92e50"
               LastKnownName="Pessoa"
-              LastKnownLocation="Package_1302.uml" />
+              LastKnownLocation="DominioSimplesClassDiagram.uml" />
           </generalization>
         </generalsInternal>
         <ownedAttributesInternal>
@@ -130,7 +130,7 @@
             <classMoniker
               Id="7f678240-7492-41e0-be86-1d8626a1ef1c"
               LastKnownName="Estilo"
-              LastKnownLocation="Package_1302.uml" />
+              LastKnownLocation="DominioSimplesClassDiagram.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
@@ -195,7 +195,7 @@
             <classMoniker
               Id="a49012d0-82e2-4731-b760-f9f7bf21caaf"
               LastKnownName="Album"
-              LastKnownLocation="Package_1302.uml" />
+              LastKnownLocation="DominioSimplesClassDiagram.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
@@ -233,6 +233,45 @@
                       value="*" />
                   </upperValueInternal>
                 </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="50c218bc-23c2-4182-9019-affa7038765e"
+            isDerived="false"
+            sourceEndRoleName="Artista"
+            targetEndRoleName="Cidade"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="c1c7faa3-5d64-4b26-b9c5-64e455a5d463"
+              LastKnownName="Cidade"
+              LastKnownLocation="DominioSimplesClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c3d9f14d-0757-43eb-8f6a-2d8adb08fdf2"
+                  name="Artista"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c8af5d5b-b3d8-4dcd-ac04-9aa77d55076b"
+                  name="Cidade"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
@@ -336,7 +375,7 @@
             <classMoniker
               Id="c6c22ca6-93c7-42b8-b295-3be017e3695b"
               LastKnownName="Musica"
-              LastKnownLocation="Package_1302.uml" />
+              LastKnownLocation="DominioSimplesClassDiagram.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
@@ -481,6 +520,50 @@
           <property
             Id="b99f551b-83a9-4609-9bdc-00da5ce2c5bc"
             name="Titulo"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="c1c7faa3-5d64-4b26-b9c5-64e455a5d463"
+        name="Cidade"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="1b7d3483-dd87-4189-98d4-db3dbf13ec03"
+            name="Id"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="b31edeea-c947-4984-a4ac-5108ece8018d"
+            name="Nome"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="90698365-ff32-4b0d-a8f8-b8087241a3e6"
+            name="UF"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"

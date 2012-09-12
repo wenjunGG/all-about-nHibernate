@@ -1,19 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="a7d1a780-e7fc-4596-b6cf-60d73bfcea78" name="DominioSimplesClassDiagram" linkedPackageId="cd72aa5f-fd44-4f00-b63d-a04dc32bb873" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="c55dda6a-918a-4b4c-a157-6d40b15a60ff">
-      <profileInstance Id="ca841c18-096f-4036-a907-7c530de91e10" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="578d3195-1dcd-4018-94dd-1d60abcdfab8">
-      <profileInstance Id="f31f9833-90fd-4a7b-bca5-455f5d6ed3f5" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasPackages>
       <package Id="78a34613-645f-46b3-ab50-3cc47833831f" name="Simples">
@@ -133,6 +119,22 @@
                   </relationshipOwnedElementsInternal>
                   <elementDefinition Id="aa6d8fd0-e93c-4a90-88dc-a861a875376a" />
                 </association>
+                <association Id="25015a44-b926-4095-9626-bc61e359d55a" isDerived="false" sourceEndRoleName="Artista" targetEndRoleName="Cidade" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="75035e6e-b212-4270-b1f4-1b59b66df99d" LastKnownName="Cidade" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="47882e7f-fe1f-4b91-b8fb-ecb0f0bd0534" name="Artista" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="c3d9f14d-0757-43eb-8f6a-2d8adb08fdf2" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="b3ce97aa-0e1c-41f7-ae3b-ca7b4dc7e488" name="Cidade" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="c8af5d5b-b3d8-4dcd-ac04-9aa77d55076b" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="50c218bc-23c2-4182-9019-affa7038765e" />
+                </association>
               </targetEnds>
               <ownedAttributesInternal>
                 <property Id="8ad740cb-91a5-46b5-acec-e9bc06646f16" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -232,11 +234,41 @@
               </ownedAttributesInternal>
             </class>
           </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="75035e6e-b212-4270-b1f4-1b59b66df99d" name="Cidade" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="c1c7faa3-5d64-4b26-b9c5-64e455a5d463" />
+              <ownedAttributesInternal>
+                <property Id="2384c22d-91c3-41ef-94a6-dde52c8cbb86" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1b7d3483-dd87-4189-98d4-db3dbf13ec03" />
+                </property>
+                <property Id="1f1bf30b-3c0e-4478-9a0f-cb2c241edbad" name="Nome" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b31edeea-c947-4984-a4ac-5108ece8018d" />
+                </property>
+                <property Id="e2a6fe44-e073-4e68-b908-8352cf7c88fd" name="UF" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="90698365-ff32-4b0d-a8f8-b8087241a3e6" />
+                </property>
+              </ownedAttributesInternal>
+            </class>
+          </packageHasNamedElement>
         </packagedElements>
       </package>
     </logicalClassDesignerModelHasPackages>
   </packagedElements>
   <package Id="cd72aa5f-fd44-4f00-b63d-a04dc32bb873" name="DominioClassDiagram">
     <elementDefinition Id="6c835434-8f1b-40e1-9122-b4304b268dae" />
+    <profileInstances>
+      <packageHasProfileInstances Id="c55dda6a-918a-4b4c-a157-6d40b15a60ff">
+        <profileInstance Id="ca841c18-096f-4036-a907-7c530de91e10" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="578d3195-1dcd-4018-94dd-1d60abcdfab8">
+        <profileInstance Id="f31f9833-90fd-4a7b-bca5-455f5d6ed3f5" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>

@@ -13,5 +13,12 @@ namespace EstudoNHTest
             var session = NHibernateSession.OpenSession();
             Assert.IsTrue(true);
         }
+
+        [TestMethod]
+        public void OpenSessionSQLiteTest()
+        {
+            var session = Dominio.Simples.Util.NHibernateSession.OpenSession();
+            Assert.IsTrue(true);
+        }
     }
 }

@@ -9,5 +9,6 @@ namespace Dominio.Simples.Model
         public virtual decimal Cache { set; get; }
         public virtual IList<Estilo> Estilos { set; get; }
         public virtual IList<Album> Albuns { set; get; }
+        public virtual Cidade Cidade { set; get; }
     }
 }

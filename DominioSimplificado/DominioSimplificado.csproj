@@ -45,7 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mapeamento\AlbumMap.cs" />
+    <Compile Include="Mapeamento\ArtistaMap.cs" />
     <Compile Include="Mapeamento\CidadeMap.cs" />
+    <Compile Include="Mapeamento\EstiloMap.cs" />
+    <Compile Include="Mapeamento\MusicaMap.cs" />
     <Compile Include="Mapeamento\PessoaFisicaMap.cs" />
     <Compile Include="Mapeamento\PessoaJuridicaMap.cs" />
     <Compile Include="Mapeamento\PessoaMap.cs" />

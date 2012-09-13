@@ -44,10 +44,12 @@
       <HintPath>..\Dependencia\NHibernate.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Data.SQLite">
+    <Reference Include="System.Data.SQLite, Version=1.0.81.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Dependencia\System.Data.SQLite.dll</HintPath>
     </Reference>
-    <Reference Include="System.Data.SQLite.Linq">
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.81.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Dependencia\System.Data.SQLite.Linq.dll</HintPath>
     </Reference>
   </ItemGroup>
@@ -64,6 +66,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Simples\ArtistaCrudTests.cs" />
+    <Compile Include="Simples\EstiloCrudTests.cs" />
+    <Compile Include="Simples\CidadeCrudTests.cs" />
     <Compile Include="Simples\PessoaCrudTests.cs" />
     <Compile Include="PessoaCrudTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

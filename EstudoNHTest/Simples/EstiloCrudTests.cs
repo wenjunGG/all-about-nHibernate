@@ -11,9 +11,9 @@ namespace EstudoNHTest.Simples
     /// Summary description for PessoaCrudTests
     /// </summary>
     [TestClass]
-    public class PessoaCrudTests
+    public class EstiloCrudTests
     {
-        public PessoaCrudTests()
+        public EstiloCrudTests()
         {
             //
             // TODO: Add constructor logic here
@@ -61,41 +61,18 @@ namespace EstudoNHTest.Simples
         #endregion
 
         [TestMethod]
-        public void CreatePessoaFisica()
+        public void CreateEstilo()
         {
             using(var session = NHibernateSession.OpenSession())
             {
                 using (var tran = session.BeginTransaction())
                 {
-                    var pessoa = new PessoaFisica();
-                    pessoa.Nome = "Jackson";
-                    pessoa.Sobrenome = "Pinto";
-                    pessoa.DataNascimento = new DateTime(1975, 11, 22);
-                    pessoa.Cpf = "12362543625";
-                    pessoa.Endereco = "Rua das Coves";
-                    pessoa.Sexo = 'M';
+                    var estilo = new Estilo();
+                    estilo.Descricao = "Primeiro Estilo";
 
-                    session.Save(pessoa);
-                    tran.Rollback();
-                }
-            }
-        }
+                    session.Save(estilo);
+                    Assert.IsTrue(estilo.Id > 0);
 
-        [TestMethod]
-        public void CreatePessoaJuridica()
-        {
-            using (var session = NHibernateSession.OpenSession())
-            {
-                using (var tran = session.BeginTransaction())
-                {
-                    var pessoa = new PessoaJuridica();
-                    pessoa.RazaoSocial = "Emrpesa do Zé";
-                    pessoa.DataAbertura = DateTime.Today;
-                    pessoa.Cnpj = "52346852316587";
-                    pessoa.Endereco = "Ruas das Coves, 45";
-                    pessoa.NomeFantasia = "Maria Chiquinha Delivery";
-
-                    session.Save(pessoa);
                     tran.Rollback();
                 }
             }

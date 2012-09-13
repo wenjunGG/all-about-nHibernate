@@ -26,11 +26,11 @@ create table Estilo(
 
 create table Artista(
 	id integer primary key autoincrement
-	cidade_id integer not null
+	, cidade_id integer not null
 	, nome varchar(255) null
 	, sobrenome varchar(255) null
 	, datanascimento text null
-	, foreign key(cidade_id) references Cidade(id)
+	, foreign key (cidade_id) references Cidade(id)
 );
 
 create table EstiloArtista(
@@ -38,24 +38,24 @@ create table EstiloArtista(
 	, estilo_id int not null
 	, primary key(artista_id, estilo_id)
 	, foreign key (artista_id) references Artista(id)
-	, foreign key (estilo_id) references estilo(id)
+	, foreign key (estilo_id) references Estilo(id)
 );
 
 create table Album(
 	id integer not null primary key autoincrement
-	, artista_id integer
-	, titiulo varchar(255)
-	, capa varchar(255)
-	, dataLancamento text
-	, avaliacao integer
+	, artista_id integer  not null
+	, titulo varchar(255) null
+	, capa varchar(255) null
+	, dataLancamento text null
+	, avaliacao integer null
 	, foreign key (artista_id) references Artista(id)
 );
 
 create table Musica(
 	id integer not null primary key autoincrement
-	, album_id integer
-	, titulo varchar(255)
-	, avaliacao integer
-	, duracaoSegudos integer
+	, album_id integer  not null
+	, titulo varchar(255) null
+	, avaliacao integer null
+	, duracaoSegundos integer null
 	, foreign key (album_id) references Album(id)
 );

@@ -23,7 +23,7 @@ namespace Dominio.Util
                 configurantion.DataBaseIntegration(conf => {
                     conf.Dialect<SQLiteDialect>();
                     conf.ConnectionString = "Data Source=data-domain.db;Version=3";
-                    conf.Driver<SQLiteDriver>();
+                    conf.Driver<SQLite20Driver>();
                     conf.LogFormattedSql = true;
                     conf.LogSqlInConsole = true;
                 });

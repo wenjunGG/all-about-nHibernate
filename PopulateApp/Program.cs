@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Dominio.Simples.Model;
+using PopulateApp.Controller;
 
 namespace PopulateApp
 {
@@ -10,6 +7,14 @@ namespace PopulateApp
     {
         static void Main(string[] args)
         {
+            var controller = new DomainSimpleController();            
+            controller.Inserir<PessoaFisica>();
+            controller.Inserir<PessoaJuridica>();
+            controller.Inserir<Cidade>();
+            controller.Inserir<Estilo>();
+            controller.Inserir<Artista>();
+            controller.Inserir<Album>();
+            controller.Inserir<Musica>();
         }
     }
 }

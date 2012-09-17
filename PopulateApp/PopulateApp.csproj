@@ -35,6 +35,9 @@
     <Reference Include="Iesi.Collections">
       <HintPath>..\Dependencia\Iesi.Collections.dll</HintPath>
     </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\Dependencia\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="NHibernate">
       <HintPath>..\Dependencia\NHibernate.dll</HintPath>
     </Reference>

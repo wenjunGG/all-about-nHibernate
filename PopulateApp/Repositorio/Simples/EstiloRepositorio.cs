@@ -82,5 +82,30 @@ namespace PopulateApp.Repositorio.Simples
         {
             throw new NotImplementedException();
         }
+
+        public static List<Estilo> GetEstilos(ISession session)
+        {
+            var query = session.Query<Estilo>();
+            var random = new Random(DateTime.Now.Millisecond);
+            var totalEstilos = query.ToList().Count;
+            var qtdSelect = random.Next(1, totalEstilos);
+
+            var minId = query.Min(estilo => estilo.Id);
+            var maxId = query.Max(estilo => estilo.Id);
+
+            var estilos = new List<Estilo>();
+
+            do
+            {
+                var estilo = query.FirstOrDefault(e => e.Id == random.Next(minId, maxId));
+                
+                if (estilo == null || estilos.Exists(e => e.Id == estilo.Id))
+                    continue;
+
+                estilos.Add(estilo);
+            } while (estilos.Count < qtdSelect);
+
+            return estilos;
+        }
     }
 }

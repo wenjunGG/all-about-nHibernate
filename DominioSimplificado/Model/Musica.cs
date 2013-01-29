@@ -1,4 +1,6 @@
-﻿namespace Dominio.Simples.Model
+﻿using Dominio.Simples.Model.Interfaces;
+
+namespace Dominio.Simples.Model
 {
     public class Musica
     {
@@ -6,6 +8,6 @@
         public virtual string Titulo { set; get; }
         public virtual int Avaliacao { set; get; }
         public virtual int DuracaoSegundos { set; get; }
-        public virtual Album Album { set; get; }
+        public virtual IAlbum Album { set; get; }
     }
 }

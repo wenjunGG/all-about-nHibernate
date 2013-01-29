@@ -24,8 +24,8 @@ namespace Dominio.Simples.Util
                     conf.Dialect<SQLiteDialect>();
                     conf.ConnectionString = "Data Source=data-simple-domain.db;Version=3";
                     conf.Driver<SQLite20Driver>();
-                    conf.LogFormattedSql = false;
-                    conf.LogSqlInConsole = false;
+                    conf.LogFormattedSql = true;
+                    conf.LogSqlInConsole = true;
                 });
 
                 config.AddMapping(map);

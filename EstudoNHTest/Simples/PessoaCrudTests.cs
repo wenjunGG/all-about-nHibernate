@@ -4,6 +4,7 @@ using System.Linq;
 using NHibernate.Linq;
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NHibernate;
 
 namespace EstudoNHTest.Simples
 {
@@ -21,7 +22,7 @@ namespace EstudoNHTest.Simples
         }
 
         private TestContext testContextInstance;
-
+        
         /// <summary>
         ///Gets or sets the test context which provides
         ///information about and functionality for the current test run.
@@ -36,6 +37,14 @@ namespace EstudoNHTest.Simples
             {
                 testContextInstance = value;
             }
+        }
+
+        private int GetRandonSkipNumber<T>(ISession session)
+        {
+            var random = new Random(DateTime.Now.Millisecond);
+            var total = session.Query<T>().Count();
+
+            return random.Next(total);
         }
 
         #region Additional test attributes
@@ -63,7 +72,7 @@ namespace EstudoNHTest.Simples
         [TestMethod]
         public void CreatePessoaFisica()
         {
-            using(var session = NHibernateSession.OpenSession())
+            using (var session = NHibernateSession.OpenSession())
             {
                 using (var tran = session.BeginTransaction())
                 {
@@ -98,6 +107,81 @@ namespace EstudoNHTest.Simples
                     session.Save(pessoa);
                     tran.Rollback();
                 }
+            }
+        }
+
+        [TestMethod]
+        public void EditPessoaFisica()
+        {
+            using (var session = NHibernateSession.OpenSession())
+            {
+                var tran = session.BeginTransaction();
+                var nome = "João";
+                var sobrenome = "Pinto";
+                var pessoa = session.Query<PessoaFisica>().Skip(GetRandonSkipNumber<PessoaFisica>(session)).First();
+
+                pessoa.Nome = nome;
+                pessoa.Sobrenome = sobrenome;
+                session.Update(pessoa);
+                tran.Commit();
+
+                session.Evict(pessoa);
+                var pessoaEditada = session.Get<PessoaFisica>(pessoa.Id);
+
+                Assert.AreEqual(nome, pessoa.Nome);
+                Assert.AreEqual(sobrenome, pessoa.Sobrenome);
+            }
+        }
+
+        [TestMethod]
+        public void EditPessoaJuridica()
+        {
+            using (var session = NHibernateSession.OpenSession())
+            {
+                var tran = session.BeginTransaction();
+                var razaoSocial = "Casa de Carne";
+                var nomeFantasia = "Churras do Zé";
+                var pessoa = session.Query<PessoaJuridica>().Skip(GetRandonSkipNumber<PessoaJuridica>(session)).First();
+
+                pessoa.RazaoSocial = razaoSocial;
+                pessoa.NomeFantasia = nomeFantasia;
+                session.Update(pessoa);
+                tran.Commit();
+
+                session.Evict(pessoa);
+                var pessoaEditada = session.Get<PessoaJuridica>(pessoa.Id);
+
+                Assert.AreEqual(razaoSocial, pessoa.RazaoSocial);
+                Assert.AreEqual(nomeFantasia, pessoa.NomeFantasia);
+            }
+        }
+
+        [TestMethod]
+        public void EditPessoa()
+        {
+            using (var session = NHibernateSession.OpenSession())
+            {
+                var tran = session.BeginTransaction();
+                //var razaoSocial = "Casa de Carne";
+                //var nomeFantasia = "Churras do Zé";
+                var pessoas = session.Query<Pessoa>().Skip(GetRandonSkipNumber<Pessoa>(session)).Take(5);
+
+                //var complemento = DateTime.Now.Millisecond.ToString();
+                //pessoas.ForEach(p => p.Endereco = "Novo endereço" + complemento);
+                //pessoas.ForEach(p => session.Save(p));
+
+                var ids = pessoas.Select(p => p.Id).ToList();
+
+                tran.Commit();
+
+                //pessoas.ForEach(p => session.Evict(p));
+
+                var query = from p in session.Query<Pessoa>() where ids.Contains(p.Id) select p;
+                var d = query.ToList();
+
+                var x = session.Query<Pessoa>().Where(p => ids.Contains(p.Id)).ToList();
+                //var d = session.Query<PessoaFisica>().;
+
             }
         }
     }

@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NHibernate.Linq;
 using NHibernate;
+using Dominio.Simples.Model.Interfaces;
 
 namespace PopulateApp.Repositorio.Simples
 {
@@ -34,12 +35,12 @@ namespace PopulateApp.Repositorio.Simples
                         {
                             Cidade = cidade,
                             DataNascimento = DateTime.Now.AddMonths(_geradorRandom.Next(240) * -1),
-                            Estilos = estilos,
+                            Estilos = (IList<IEstilo>)estilos,
                             Nome = String.Format("Artista Nome {0}", DateTime.Now.Ticks),
                             Sobrenome = String.Format("Artista Sobrenome {0}", DateTime.Now.Ticks)
                         };
 
-                        artista.Albuns = AlbumRepositorio.GetAlbuns(artista);
+                        artista.Albuns = (List<IAlbum>)AlbumRepositorio.GetAlbuns(artista);
 
                         session.Save(artista);
                         qtdArtistasInseridos++;

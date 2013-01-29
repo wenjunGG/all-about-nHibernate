@@ -1,10 +1,11 @@
 ﻿using NHibernate.Mapping.ByCode;
 using NHibernate.Mapping.ByCode.Conformist;
 using Dominio.Simples.Model;
+using Dominio.Simples.Model.Interfaces;
 
 namespace Dominio.Simples.Mapeamento
 {
-    public class AlbumMap : ClassMapping<Album>
+    public class AlbumMap : ClassMapping<IAlbum>
     {
         public AlbumMap()
         {
@@ -13,6 +14,8 @@ namespace Dominio.Simples.Mapeamento
                 map.Column("ID");
                 map.Generator(Generators.Identity);
             });
+
+            Discriminator(discriminator => discriminator.Column("ALBUM_TYPE"));
 
             ManyToOne(album => album.Artista, map => {
                 map.Column("artista_id");

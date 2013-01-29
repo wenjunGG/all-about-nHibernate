@@ -1,6 +1,7 @@
 ﻿using NHibernate.Mapping.ByCode;
 using NHibernate.Mapping.ByCode.Conformist;
 using Dominio.Simples.Model;
+using System.Collections.Generic;
 
 namespace Dominio.Simples.Mapeamento
 {

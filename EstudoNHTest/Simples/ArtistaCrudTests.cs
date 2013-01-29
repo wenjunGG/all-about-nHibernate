@@ -6,6 +6,7 @@ using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NHibernate.Exceptions;
 using System.Collections.Generic;
+using Dominio.Simples.Model.Interfaces;
 
 namespace EstudoNHTest.Simples
 {
@@ -179,7 +180,7 @@ namespace EstudoNHTest.Simples
                     var artista = _artista;
                     artista.Cidade = cidade;
 
-                    artista.Albuns = new List<Album>();
+                    artista.Albuns = new List<IAlbum>();
                     artista.Albuns.Add(_album);
                     _album.Artista = artista;
 
@@ -209,7 +210,7 @@ namespace EstudoNHTest.Simples
                     session.Save(artista);
 
                     var album = _album;
-                    artista.Albuns = new List<Album> { album };
+                    artista.Albuns = new List<IAlbum> { album };
                     album.Artista = artista;
                     session.Save(album);
 
@@ -245,14 +246,14 @@ namespace EstudoNHTest.Simples
                     artista.Cidade = cidade;
 
                     var album = _album;
-                    artista.Albuns = new List<Album> { album };
+                    artista.Albuns = new List<IAlbum> { album };
                     album.Artista = artista;
 
                     var muscia = _musica;
                     muscia.Album = album;
                     album.Musicas = new List<Musica> { muscia };
 
-                    artista.Estilos = new List<Estilo>();
+                    artista.Estilos = new List<IEstilo>();
                     artista.Estilos.Add(estilo);
 
                     session.Save(artista);
@@ -281,12 +282,12 @@ namespace EstudoNHTest.Simples
                     var artista = _artista;
                     artista.Cidade = cidade;
 
-                    artista.Albuns = new List<Album>();
+                    artista.Albuns = new List<IAlbum>();
                     artista.Albuns.Add(_album);
                     _album.Artista = artista;
 
                     var muscia = _musica;
-                    muscia.Album = artista.Albuns.FirstOrDefault();
+                    muscia.Album = (IAlbum)artista.Albuns.FirstOrDefault();
                     artista.Albuns.FirstOrDefault().Musicas = new List<Musica> { muscia };                    
 
                     session.Save(artista);

@@ -9,8 +9,7 @@ namespace Dominio.Mapeamento
         public EstiloMap()
         {
             Table("ESTILO");
-            Id(estilo => estilo.Id, map =>
-            {
+            Id(estilo => estilo.Id, map => {
                 map.Column("ID");
                 map.Generator(Generators.Identity);
             });

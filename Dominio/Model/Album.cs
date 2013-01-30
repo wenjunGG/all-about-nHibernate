@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Dominio.Model.Interfaces;
+using System;
 using System.Collections.Generic;
 
 namespace Dominio.Model
 {
-    public class Album
+    public class Album : IAlbum
     {
         public virtual int Id { set; get; }
         public virtual Artista Artista { set; get; }

@@ -11,33 +11,31 @@ namespace Dominio.Util
     {
         private static ISessionFactory _sessionFactory;
 
-        public static ISession OpenSession()
-        {
+        public static ISession OpenSession() {
+
             if (_sessionFactory == null)
             {
                 var mapper = new ModelMapper();
                 mapper.AddMappings(Assembly.GetExecutingAssembly().GetExportedTypes());
                 var map = mapper.CompileMappingForAllExplicitlyAddedEntities();
 
-                var configurantion = new Configuration();
-                configurantion.DataBaseIntegration(conf => {
+                var config = new Configuration();
+                config.DataBaseIntegration(conf => {
                     conf.Dialect<SQLiteDialect>();
-                    conf.ConnectionString = "Data Source=data-domain.db;Version=3";
+                    conf.ConnectionString = "Data Source=data-simple-domain.db;Version=3";
                     conf.Driver<SQLite20Driver>();
                     conf.LogFormattedSql = true;
                     conf.LogSqlInConsole = true;
                 });
 
-                configurantion.AddMapping(map);
-                _sessionFactory = configurantion.BuildSessionFactory();
+                config.AddMapping(map);
+                _sessionFactory = config.BuildSessionFactory();
             }
+
+
 
             return _sessionFactory.OpenSession();
         }
-
-        public static void CloseSession() {
-            _sessionFactory.Close();
-
-        }
+        public static void Close() { _sessionFactory.Close(); }
     }
 }

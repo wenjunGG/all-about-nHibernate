@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{01169CE1-1240-4556-91A6-4A4F38CB9C88}</ProjectGuid>
+    <ProjectGuid>{CC73F9C4-BD6E-4108-8F72-3BB876C01858}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Dominio</RootNamespace>
@@ -30,11 +30,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Iesi.Collections">
-      <HintPath>..\Dependencia\Iesi.Collections.dll</HintPath>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Iesi.Collections.3.2.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
     </Reference>
-    <Reference Include="NHibernate">
-      <HintPath>..\Dependencia\NHibernate.dll</HintPath>
+    <Reference Include="NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NHibernate.3.3.2.4000\lib\Net35\NHibernate.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -45,28 +47,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IDaoGeneric.cs" />
+    <Compile Include="IRepositorio.cs" />
+    <Compile Include="Mapeamento\AlbumMap.cs" />
+    <Compile Include="Mapeamento\ArtistaMap.cs" />
+    <Compile Include="Mapeamento\CidadeMap.cs" />
     <Compile Include="Mapeamento\EstiloMap.cs" />
+    <Compile Include="Mapeamento\MusicaMap.cs" />
     <Compile Include="Mapeamento\PessoaFisicaMap.cs" />
     <Compile Include="Mapeamento\PessoaJuridicaMap.cs" />
     <Compile Include="Mapeamento\PessoaMap.cs" />
     <Compile Include="Model\Album.cs" />
     <Compile Include="Model\Artista.cs" />
-    <Compile Include="Model\Contato.cs" />
-    <Compile Include="Mapeamento\ContatoMap.cs" />
+    <Compile Include="Model\Cidade.cs" />
     <Compile Include="Model\Estilo.cs" />
+    <Compile Include="Model\Interfaces\IAlbum.cs" />
+    <Compile Include="Model\Interfaces\ICidade.cs" />
+    <Compile Include="Model\Interfaces\IEstilo.cs" />
+    <Compile Include="Model\Interfaces\IArtista.cs" />
+    <Compile Include="Model\Interfaces\IEntityId.cs" />
     <Compile Include="Model\Musica.cs" />
     <Compile Include="Model\Pessoa.cs" />
     <Compile Include="Model\PessoaFisica.cs" />
     <Compile Include="Model\PessoaJuridica.cs" />
-    <Compile Include="Model\Produtor.cs" />
-    <Compile Include="Model\Usuario.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\NHibernateSession.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="data-domain.db">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

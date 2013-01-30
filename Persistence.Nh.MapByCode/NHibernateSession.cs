@@ -5,7 +5,7 @@ using NHibernate.Dialect;
 using NHibernate.Driver;
 using System.Reflection;
 
-namespace Dominio.Util
+namespace Persistence.Nh.MapByCode
 {
     public class NHibernateSession
     {
@@ -32,10 +32,9 @@ namespace Dominio.Util
                 _sessionFactory = config.BuildSessionFactory();
             }
 
-
-
             return _sessionFactory.OpenSession();
         }
+
         public static void Close() { _sessionFactory.Close(); }
     }
 }

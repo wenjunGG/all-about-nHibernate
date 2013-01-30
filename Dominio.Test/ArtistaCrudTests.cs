@@ -1,8 +1,8 @@
 ﻿using Dominio.Model;
 using Dominio.Model.Interfaces;
-using Dominio.Util;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NHibernate.Exceptions;
+using Persistence.Nh.MapByCode;
 using System;
 using System.Collections.Generic;
 using System.Linq;

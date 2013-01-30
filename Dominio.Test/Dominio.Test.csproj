@@ -8,7 +8,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Dominio.Test</RootNamespace>
     <AssemblyName>Dominio.Test</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -16,6 +16,7 @@
     <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
     <IsCodedUITest>False</IsCodedUITest>
     <TestProjectType>UnitTest</TestProjectType>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -87,6 +88,14 @@
     <ProjectReference Include="..\Dominio\Dominio.csproj">
       <Project>{cc73f9c4-bd6e-4108-8f72-3bb876c01858}</Project>
       <Name>Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Persistence.Nh.MapByCode\Persistence.Nh.MapByCode.csproj">
+      <Project>{5c55467d-28b0-4f1f-95f1-032b751e7064}</Project>
+      <Name>Persistence.Nh.MapByCode</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Persistence.Nh.MapByXml\Persistence.Nh.MapByXml.csproj">
+      <Project>{941749ae-d281-4b57-b581-9ce248a89426}</Project>
+      <Name>Persistence.Nh.MapByXml</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

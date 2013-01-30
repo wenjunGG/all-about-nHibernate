@@ -3,7 +3,7 @@ using NHibernate.Mapping.ByCode.Conformist;
 using Dominio.Model;
 using Dominio.Model.Interfaces;
 
-namespace Dominio.Mapeamento
+namespace Persistence.Nh.MapByCode
 {
     public class AlbumMap : ClassMapping<IAlbum>
     {

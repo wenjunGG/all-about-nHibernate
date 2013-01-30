@@ -2,7 +2,7 @@
 using NHibernate.Mapping.ByCode.Conformist;
 using Dominio.Model;
 
-namespace Dominio.Mapeamento
+namespace Persistence.Nh.MapByCode
 {
     public class MusicaMap : ClassMapping<Musica>
     {

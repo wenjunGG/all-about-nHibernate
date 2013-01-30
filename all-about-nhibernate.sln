@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominio", "Dominio\Dominio.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominio.Test", "Dominio.Test\Dominio.Test.csproj", "{804A15CE-B088-46F0-96C3-BC1A1DE9E8A8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence.Nh.MapByCode", "Persistence.Nh.MapByCode\Persistence.Nh.MapByCode.csproj", "{5C55467D-28B0-4F1F-95F1-032B751E7064}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence.Nh.MapByXml", "Persistence.Nh.MapByXml\Persistence.Nh.MapByXml.csproj", "{941749AE-D281-4B57-B581-9CE248A89426}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +29,14 @@ Global
 		{804A15CE-B088-46F0-96C3-BC1A1DE9E8A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{804A15CE-B088-46F0-96C3-BC1A1DE9E8A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{804A15CE-B088-46F0-96C3-BC1A1DE9E8A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C55467D-28B0-4F1F-95F1-032B751E7064}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C55467D-28B0-4F1F-95F1-032B751E7064}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C55467D-28B0-4F1F-95F1-032B751E7064}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C55467D-28B0-4F1F-95F1-032B751E7064}.Release|Any CPU.Build.0 = Release|Any CPU
+		{941749AE-D281-4B57-B581-9CE248A89426}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{941749AE-D281-4B57-B581-9CE248A89426}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{941749AE-D281-4B57-B581-9CE248A89426}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{941749AE-D281-4B57-B581-9CE248A89426}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

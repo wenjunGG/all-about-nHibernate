@@ -2,7 +2,7 @@
 using NHibernate.Mapping.ByCode;
 using NHibernate.Mapping.ByCode.Conformist;
 
-namespace Dominio.Mapeamento
+namespace Persistence.Nh.MapByCode
 {
     public class PessoaFisicaMap : SubclassMapping<PessoaFisica>
     {

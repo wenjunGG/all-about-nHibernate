@@ -3,7 +3,7 @@ using NHibernate.Mapping.ByCode.Conformist;
 using Dominio.Model;
 using System.Collections.Generic;
 
-namespace Dominio.Mapeamento
+namespace Persistence.Nh.MapByCode
 {
     public class ArtistaMap : ClassMapping<Artista>
     {

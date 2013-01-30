@@ -1,9 +1,10 @@
-﻿using Dominio.Util;
+﻿
 using Dominio.Model;
 using System.Linq;
 using NHibernate.Linq;
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Persistence.Nh.MapByCode;
 
 namespace Dominio.Test
 {
